@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erolack Paints</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-700">Erolack Paints</h1>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+                <li><a href="#products" class="hover:text-blue-600">Products</a></li>
+                <li><a href="#about" class="hover:text-blue-600">About</a></li>
+                <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+            </ul>
+            <button id="menuBtn" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <ul id="mobileMenu" class="md:hidden hidden flex-col space-y-2 px-4 pb-4">
+            <li><a href="#home" class="block py-2 text-blue-700">Home</a></li>
+            <li><a href="#products" class="block py-2 text-blue-700">Products</a></li>
+            <li><a href="#about" class="block py-2 text-blue-700">About</a></li>
+            <li><a href="#contact" class="block py-2 text-blue-700">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="pt-20 text-center bg-blue-100 py-20">
+        <h2 class="text-4xl font-bold mb-4">Bringing Color to Life</h2>
+        <p class="text-lg mb-6">Discover premium quality paints for every surface and style.</p>
+        <a href="#products" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Shop Now</a>
+    </section>
+
+    <section id="products" class="py-16 px-6 bg-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-10">Our Products</h2>
+            <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="border rounded-lg shadow-md p-6">
+                    <img src="3-reasons-why-winter-is-the-best-time-to-have-your-homes-interior-painted.jpeg" alt="Interior Paint" class="mx-auto mb-4">
+                    <h3 class="text-xl font-medium mb-2">Interior Paint</h3>
+                    <p>Perfect for walls and ceilings. Smooth finish and long-lasting colors.</p>
+                </div>
+                <div class="border rounded-lg shadow-md p-6">
+                    <img src="images.jpeg" alt="Exterior Paint" class="mx-auto mb-4">
+                    <h3 class="text-xl font-medium mb-2">Exterior Paint</h3>
+                    <p>Weather-resistant paints ideal for outdoor surfaces and exteriors.</p>
+                </div>
+                <div class="border rounded-lg shadow-md p-6">
+                    <img src="images (1).jpeg" alt="Wood Coatings" class="mx-auto mb-4">
+                    <h3 class="text-xl font-medium mb-2">Wood Coatings</h3>
+                    <p>Protect and enhance wood surfaces with our premium coatings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 px-6 bg-gray-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-6">About Us</h2>
+            <p class="text-lg leading-relaxed">
+                At Erolack Paints, we believe color is more than just aesthetics—it's an expression of personality and style. 
+                With years of innovation and commitment to quality, we offer a wide range of eco-friendly, durable, and vibrant paints.
+            </p>
+        </div>
+    </section>
+
+
+    <section id="contact" class="py-16 px-6 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-semibold mb-6 text-center">Contact Us</h2>
+            <form class="space-y-4">
+                <input type="text" placeholder="Name" class="w-full border px-4 py-2 rounded" required>
+                <input type="email" placeholder="Email" class="w-full border px-4 py-2 rounded" required>
+                <textarea rows="5" placeholder="Your Message" class="w-full border px-4 py-2 rounded" required></textarea>
+                <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Send</button>
+            </form>
+        </div>
+    </section>
+
+
+    <footer class="bg-gray-200 text-center py-6">
+        <p>&copy; 2025 Erolack Paints. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
